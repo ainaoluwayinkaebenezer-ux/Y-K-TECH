@@ -10,12 +10,14 @@ header nav{
     background-color: black;
     border-radius: 15px;
     text-align: center;
+    transition: 0.3s ease;
 }
 .shortcuts a{
     text-decoration: none;
     color: white;
     font-weight: bold;
-    margin: 5px;
+    margin: 0 10px;
+    transition: 0.3s ease;
 }
 .shortcuts button{
     border: none;
@@ -25,13 +27,14 @@ header nav{
     cursor: pointer;
     margin-top: 10px;
     padding: 5px;
+    transition: 0.3s ease;
 }
 .shortcuts button:hover{
     background-color: white;
     color: black;
 }
 .shortcuts a:hover{
-    color: grey;
+    color: aqua;
 }
 header nav:hover{
     background-color: navy;
@@ -39,24 +42,28 @@ header nav:hover{
 .welcome-section{
     text-align: center;
     color: black;
-    margin-top: 15px;
+    padding: 60px 20px;
+}
+.welcome-section h1{
+    font-size: 45px;
+    margin-bottom: 20px;
 }
 .welcome-section:hover{
     color: navy;
     transform: scale(1.1) translateX(10px);
 }
 .welcome-section button{
-    border: none;
-    border-radius: 15px;
-    background-color: navy;
+    background-color: black;
     color: white;
+    padding: 12px 25px;
     border: none;
+    border-radius: 10px;
     font-weight: bold;
-    padding: 15px;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 .welcome-section button:hover{
-    background-color: black;
+    background-color: red;
     color: white;
 }
 .about{
@@ -123,32 +130,55 @@ width: 150px;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
-.sevice-card{
+.service-card{
     background-color: black;
     color: white;
     padding: 25px;
     border-radius: 20px;
-    box-shadow: 3px 3px 10px rgba(0 0 0 0.3);
-    transition: ease-in .2s;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
 }
-.sevice-card:hover{
-    transform: scale(1.2) translateX(10px);
+.service-card img{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 25px;
+    margin-bottom: 10px;
 }
-.sevice-card h3{
-    font-size: 30px;
-    margin-bottom: 15px;
+.service-card:hover{
+    transform: translateY(-8px);
 }
-.sevice-card h3:hover{
-    color: green;
+.service-card h3{
+    font-size: 22px;
+    margin: 15px 0 10px;
+    font-weight: bold; 
 }
-.sevice-card p{
+.service-card p{
     font-size: 15px;
     line-height: 1.6;
     margin: 0;
+     color: white;
+}
+.service-btn{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: navy;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.service-btn:hover{
+    background-color: red;
 }
 .projects{
     width: 90%;
-    max width: 1100px;
+    max-width: 1100px;
     margin: 60px auto;
     text-align: center
 }
@@ -167,6 +197,9 @@ width: 150px;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 3px 3px 10px rgba(0 0 0 0.3);
+}
+.project-card:hover{
+    transform: translate(-8px);
 }
 .project-card h3{
     font-size: 25px;
@@ -198,7 +231,7 @@ width: 150px;
     color: white;
     border-radius: 15px;
     box-shadow: 3px 3px 10px rgba(0 0 0 0.3);
-    text align: center;
+    text-align: center;
 }
 .contact h2{
     text-align: center;
@@ -216,10 +249,17 @@ width: 150px;
     border: none;
     border-radius: 15px;
     font-size: 16px;
+    font-family: inherit;
+    outline: none;
     box-sizing: border-box;
 }
-.order-form textarea{
-    height: 90px;
+.order-form input:focus,
+.order-form select:focus,
+.order-form textarea:focus {
+    outline: 5px solid green;
+}
+.order-form textarea {
+    min-height: 90px;
     resize: vertical;
 }
 .order-form button{
@@ -231,6 +271,7 @@ width: 150px;
     font-size: 17px;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 .order-form button:hover{
     background-color: aqua;
@@ -313,4 +354,160 @@ width: 150px;
 .sign-up a{
     color: #faf9f9;
     text-decoration: none;
+}
+@media (max-width: 768px) {
+    @media (max-width: 768px) {
+
+    /* HEADER / NAVIGATION */
+    header nav {
+        height: auto;
+        padding: 15px 10px;
+    }
+
+    .shortcuts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .shortcuts a {
+        margin: 3px;
+        font-size: 14px;
+    }
+
+
+    /* WELCOME SECTION */
+    .welcome-section {
+        padding: 20px 15px;
+    }
+
+    .welcome-section h1 {
+        font-size: 32px;
+    }
+
+    .welcome-section:hover {
+        transform: none;
+    }
+
+
+    /* ABOUT SECTION */
+    .about {
+        width: 90%;
+        box-sizing: border-box;
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 15px;
+        gap: 20px;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .about-image img {
+        width: 150px;
+        height: 150px;
+        margin: auto;
+    }
+
+    .about-content {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    .about-title {
+        font-size: 32px;
+    }
+
+    .about-subtitle {
+        font-size: 16px;
+    }
+
+
+    /* SERVICES */
+    .services {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    .services h2 {
+        font-size: 28px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .service-card:hover {
+        transform: none;
+    }
+
+
+    /* PROJECTS */
+    .projects {
+        width: 90%;
+        box-sizing: border-box;
+        margin: 40px auto;
+    }
+
+    .projects h2 {
+        font-size: 30px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card {
+        box-sizing: border-box;
+        padding: 25px 20px;
+    }
+
+
+    /* CONTACT / ORDER FORM */
+    .contact {
+        width: 90%;
+        box-sizing: border-box;
+        padding: 25px 15px;
+        margin: 40px auto;
+    }
+
+    .contact h2 {
+        font-size: 28px;
+    }
+
+    .order-form input,
+    .order-form select,
+    .order-form textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* FOOTER */
+    .footer {
+        padding: 25px 15px;
+    }
+
+    .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .social-links a {
+        margin: 0;
+    }
+
+}
 }

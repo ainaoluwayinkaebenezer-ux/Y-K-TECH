@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter-Program</title>
+    <link rel="stylesheet" href="counter.css">
+</head>
+<body>
+    
+    <label id="count">0</label><br>
+    <hr>
+    <button id="resetBtn" class="btn">Reset 0</button>
+    <button id="decreaseBtn" class="btn">Decrease -</button>
+    <button id="increaseBtn" class="btn">Increase +</button>
+    <hr>
+    <div class="calculator">
+        <h1 style="color: white;">CALCULATOR</h1>
+            <input type="text" id="display" readonly><br>
+            <div class="hero">
+                <button onclick="display.value+='1'">1</button>
+                <button onclick="display.value+='2'">2</button>
+                <button onclick="display.value+='3'">3</button>
+                <button onclick="display.value+='4'">4</button>
+
+                <button onclick="display.value+='5'">5</button>
+                <button onclick="display.value+='6'">6</button>
+                <button onclick="display.value+='7'">7</button>
+                <button onclick="display.value+='8'">8</button>
+
+                <button onclick="display.value+='9'">9</button>
+                <button onclick="display.value+='10'">10</button>
+                <button onclick="display.value+='0'">0</button>
+                <button onclick="display.value+='+'">+</button>
+                <button onclick="display.value+='-'">-</button>
+
+                <button onclick="display.value+='='">=</button>
+                <button onclick="display.value+='*'">*</button>
+                <button onclick="display.value+='%'">%</button>
+                <button>C</button>
+
+                <button>AC</button>
+                </div><br>
+            <p style="color: aqua;">Make use of the calculator in this section</p>
+        </div>
+    <script src="./counter.js"></script>
+</body>
+</html>
